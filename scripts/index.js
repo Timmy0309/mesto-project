@@ -1,6 +1,5 @@
 const cardsTemplate = document.querySelector('#card-template').content;
 const listCards = document.querySelector('.places__list');
-// popup
 
 const profilePopup = document.querySelector('.popup_type_edit');
 const cardPopup = document.querySelector('.popup_type_new-card');
@@ -18,7 +17,6 @@ const imagepopup_src_alt = document.querySelector('.popup__image');
 const imagepopup_name = document.querySelector('.popup__caption');
 
 
-// Для формы редактирования профиля
 const profileFormElement = document.forms['edit-profile'];
 
 const nameInput = profileFormElement.elements.name;
@@ -45,7 +43,6 @@ profilePopup.classList.add('.popup_is-animated');
 cardPopup.classList.add('.popup_is-animated');
 imagePopup.classList.add('.popup_is-animated');
 
-// like
 function handlelikebutton(evt) {
     evt.target.classList.toggle('card__like-button_is-active');
 }
@@ -70,8 +67,6 @@ closePopup.forEach(function (popup) {
     });
 });
 
-
-// @todo: Темплейт карточки
 
 function createCard(card_info){
     const cards = cardsTemplate.querySelector('.places__item').cloneNode(true);
@@ -105,9 +100,6 @@ initialCards.forEach(function(item){
     listCards.append(createCard(item));
 });
 
-// @todo: DOM узлы
-
-// @todo: Функция создания карточки
 newcardpopup.addEventListener('click', function () {
     openModal(cardPopup);
 });
@@ -131,6 +123,3 @@ function handleCardFormSubmit(evt) {
 }
 formCardElement.addEventListener('submit', handleCardFormSubmit);
 
-// @todo: Функция удаления карточки
-
-// @todo: Вывести карточки на страницу
