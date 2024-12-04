@@ -24,3 +24,5 @@ const initialCards = [
       link: "https://klokovequipment.ru/wp-content/uploads/2018/11/shtanga-klokovd-1.png",
     },
 ];
+
+export { initialCards };
