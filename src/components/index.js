@@ -87,7 +87,6 @@ profilePopup.classList.add('.popup_is-animated');
 cardPopup.classList.add('.popup_is-animated');
 imagePopup.classList.add('.popup_is-animated');
 
-// next проект
 
 const validationSettings = {
   formClass: '.popup__form',
