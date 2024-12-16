@@ -20,3 +20,13 @@
     margin-right: 0;
   }
 }
+
+.profile__image:hover + .profile__image_pen {
+  display: block;
+  opacity: 1;
+}
+
+.profile__image:hover {
+  opacity: .2;
+  cursor: pointer;
+}
