@@ -1,6 +1,5 @@
 import '../pages/index.css';
 
-// import { initialCards } from './cards.js';
 import { getCards, getUserInfo, changeProfile, createnewCard, changeAva } from './api.js';
 import { openModal, closeModal } from './modal.js';
 import { createCard } from './card.js';
@@ -35,6 +34,7 @@ const jobInput = profileFormElement.elements.description;
 const profile = document.querySelector('.profile__title');
 const jobprofile = document.querySelector('.profile__description');
 const avaprofile = document.querySelector('.profile__image');
+const avaPen = document.querySelector('.profile__image_pen');
 
 const popupAva = document.querySelector('.popup_type_avatar');
 const formAva = document.forms['edit-avatar'];
@@ -125,6 +125,10 @@ function handleCardFormSubmit(evt) {
 formCardElement.addEventListener('submit', handleCardFormSubmit);
 
 avaprofile.addEventListener('click', function () {
+    openModal(popupAva);
+});
+
+avaPen.addEventListener('click', function () {
     openModal(popupAva);
 });
 
